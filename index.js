@@ -3,13 +3,14 @@ const fs = require("fs");
 const request = require("request");
 const port = 3000;
 
-fs.readFile('./index.html', function (err, html){
-    if(err) throw err;
-});
+
         http.createServer(function (req, res) {
         if(req.url === "/contact") {
-            res.write(html);
-            res.end();
+            fs.readFile('./index.html', function (err, html){
+                if(err) throw err;
+                res.write(html);
+                res.end();
+            });
         }
         else if(req.url === "/"){
             res.write("Welcome");
