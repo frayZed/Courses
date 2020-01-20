@@ -31,23 +31,3 @@ fs.readFile('./index.html', function (err, html){
                 });
         }
         }).listen(port);
-
-
-
-
-// http.createServer(function (request, response) {
-//     if(request.url === "/about"){
-//         console.log("Поступил запрос с сервера");
-//         response.end();
-//     }
-//     else if(request.url === "/"){
-//         response.write("Hello");
-//         response.end();
-//     }
-//     else if(request.url === "/contact"){
-//         request.url = "/index.html";
-//         response.end();
-//     }
-// }).listen(port,function () {
-//     console.log("Server started up");
-// })
